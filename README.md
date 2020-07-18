@@ -9,6 +9,8 @@
 <div align="center">
 
 ⚡️ 文档网站: http://zhang_hf.gitee.io/zhf-ui
+
+</div>
 <br/>
 
 # 简介
@@ -78,7 +80,7 @@ Vue.use(Zhf)
 
 ## Sku 组件效果图
 
-<p align="center">
+<p>
     <img
-       src="./public/sku.png">
+       src="https://raw.githubusercontent.com/zhanghaifeng213/zhf-ui/master/public/sku.png">
 </p>
