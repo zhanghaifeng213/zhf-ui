@@ -1,4 +1,4 @@
-<div align="center"> <span class="logo" > zhf-ui </span> </div>
+<h1 align="center">zhf-ui</h1>
 
 <div class="row" />
 
@@ -30,10 +30,6 @@ zhf-ui 是基于 **Vue 2.0** 实现的移动端组件库
 </table>
 
 ## 安装
-
-```sh
-npm install zhf-ui -S
-```
 
 ```bash
 # 通过 npm 安装
