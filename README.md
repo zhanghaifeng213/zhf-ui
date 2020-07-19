@@ -95,7 +95,7 @@ Vue.use(Zhf)
 
 <p>
     <img
-       src="https://gitee.com/zhang_hf/spu-work/raw/master/sku.png">
+       src="https://raw.githubusercontent.com/zhanghaifeng213/zhf-ui/master/public/sku.png">
 </p>
 
 预览地址:http://zhang_hf.gitee.io/spu-work/
