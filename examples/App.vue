@@ -167,12 +167,6 @@ export default {
 }
 </script>
 <style lang="scss">
-.row {
-  margin-bottom: 20px;
-  .hm-button {
-    margin-right: 20px;
-  }
-}
 .sku-container {
   display: flex;
 }

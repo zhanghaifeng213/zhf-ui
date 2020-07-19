@@ -95,8 +95,10 @@ Vue.use(Zhf)
 
 <p>
     <img
-       src="https://raw.githubusercontent.com/zhanghaifeng213/zhf-ui/master/public/sku.png">
+       src="https://gitee.com/zhang_hf/spu-work/raw/master/sku.png">
 </p>
+
+预览地址:http://zhang_hf.gitee.io/spu-work/
 
 > 您也可以下载到本地查看运行。步骤如下:
 
