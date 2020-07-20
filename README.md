@@ -8,7 +8,7 @@
 
 <div align="center">
 
-⚡️ 文档网站: http://zhang_hf.gitee.io/zhf-ui
+⚡️ 文档网站: https://zhanghaifeng213.github.io/zhf-ui-docs
 
 </div>
 <br/>
@@ -98,7 +98,7 @@ Vue.use(Zhf)
        src="https://raw.githubusercontent.com/zhanghaifeng213/zhf-ui/master/public/sku.png">
 </p>
 
-预览地址:http://zhang_hf.gitee.io/spu-work/
+预览地址:http://zhang_hf.gitee.io/spu-work
 
 > 您也可以下载到本地查看运行。步骤如下:
 

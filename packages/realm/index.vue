@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <div v-if="!outStock" @click="onBuyOrCart" class="bottom-btn">
+    <div v-if="!outStock" @click="onBuyOrCart" class="bottom-btn" :class="[{'not-intact':!skuIntact}]">
       <div v-if="orderWay==='cart'">
         {{addCartText}}
       </div>
@@ -177,6 +177,7 @@ export default {
       //   this.setData({
       // skuIntact:
       //   })
+      this.skuIntact = true
       this.bindSkuData(spu.sku_list[0])
 
       this.setStockStatus(spu.sku_list[0].stock, this.currentSkuCount)
@@ -438,6 +439,9 @@ export default {
   background-color: #333333;
   position: absolute;
   bottom: 0;
+}
+.not-intact {
+  background-color: #dcebe6;
 }
 
 .out-stock {
