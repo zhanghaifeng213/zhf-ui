@@ -15,7 +15,7 @@
 
 # 简介
 
-zhf-ui 是基于 **Vue 2.0** 实现的移动端组件库
+zhf-ui 是基于 **Vue 2.0** 实现的移动端组件库。组件样式与交互参考了微信小程序组件库 [Lin UI](https://doc.mini.talelin.com)。
 
 ## 讨论交流
 
@@ -58,36 +58,35 @@ Vue.use(Zhf)
 以 `Sku` 组件为例，只需要在页面中引入 `realm` 标签,按文档传入 `spu` 数据和其他的属性和事件。
 <br />
 
-```html
+```vue
 <template>
-  <div id="app">
-    <div class="sku-container">
-      <div class="sku-wrap">
-        <realm
-          :spu="spu"
-          @shopping="onShopping"
-          @specchange="onSpecChange"
-        ></realm>
-      </div>
-    </div>
-  </div>
+  <realm
+    :spu="spu"
+    :minCount="minCount"
+    :order-way="orderWay"
+    @shopping="onShopping"
+    @specchange="onSpecChange"
+  >
+  </realm>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        spu: object // 数据格式见文档
-      }
+export default {
+  data(){
+    return {
+      spu: {...}, // 商品的spu数据
+      minCount: 2, // sku最小数量
+      orderWay: 'cart' // 底部按钮类型
+    }
+  },
+  methods: {
+    onShopping(val) {
+      console.log(val)
     },
-    methods: {
-      onShopping(val) {
-        console.log(val)
-      },
-      onSpecChange(val) {
-        console.log(val)
-      }
+    onSpecChange(val) {
+      console.log(val)
     }
   }
+}
 </script>
 ```
 
@@ -98,7 +97,7 @@ Vue.use(Zhf)
        src="https://raw.githubusercontent.com/zhanghaifeng213/zhf-ui/master/public/sku.png">
 </p>
 
-预览地址:http://zhang_hf.gitee.io/spu-work
+[点击预览](http://zhang_hf.gitee.io/spu-work)
 
 > 您也可以下载到本地查看运行。步骤如下:
 

@@ -1,11 +1,23 @@
 <template>
-  <div class="l-class container-count">
-    <div class="symbol" :class="[result<=min|| disabled?'disabled l-disabled-class':'abled l-symbol-class']" @click="onReduce" data-type="overflow_min" :hover-class="isHover?'count-hover':''">
+  <div class="container-count" :class="[customClass]">
+    <div class="symbol" :class="[result<=min|| disabled?'disabled':'abled',
+    {
+      disabledClass:result<=min|| disabled
+    },
+    {
+      symbolClass:!(result<=min|| disabled)
+    }
+    ]" @click="onReduce" data-type="overflow_min" :hover-class="isHover?'count-hover':''">
       <div class="l-icon l-icon-reduce" :style="{'font-size':iconSize,'color':iconColor}"></div>
     </div>
-    <input v-if="focus" class="l-count-class count" :disabled="disabled" type="number" :focus="focus" v-model="result" @blur="onBlur" />
-    <div v-else class="l-count-class count" @click="onCount">{{result}}</div>
-    <div class="l-symbol-class symbol" :class="[result>=max|| disabled?'disabled l-disabled-class':'abled l-symbol-class']" @click="onAdd" data-type="overflow_max" :hover-class="isHover?'count-hover':''">
+    <input v-if="focus" class="count" :class="[countClass]" :disabled="disabled" type="number" :focus="focus" v-model="result" @blur="onBlur" />
+    <div v-else class="count" :class="[countClass]" @click="onCount">{{result}}</div>
+    <div class="symbol" :class="[result>=max|| disabled?'disabled':'abled',{
+      disabledClass:result>=max|| disabled
+    },
+    {
+      symbolClass:!(result>=max|| disabled)
+    }]" @click="onAdd" data-type="overflow_max" :hover-class="isHover?'count-hover':''">
       <div class="l-icon l-icon-add" :style="{'font-size':iconSize,'color':iconColor}"></div>
     </div>
   </div>
@@ -21,7 +33,11 @@ export default {
     disabled: Boolean,
     iconSize: String,
     iconColor: String,
-    isHover: { type: Boolean, default: !0 }
+    isHover: { type: Boolean, default: !0 },
+    customClass: String,
+    disabledClass: String,
+    symbolClass: String,
+    countClass: String
   },
   data() {
     return {
@@ -36,11 +52,17 @@ export default {
       },
       immediate: true
     },
-    'min'() {
-      this.valueRange(this.count, 'parameter')
+    min: {
+      handler() {
+        this.valueRange(this.count, 'parameter')
+      },
+      immediate: true
     },
-    'max'() {
-      this.valueRange(this.count, 'parameter')
+    max: {
+      handler() {
+        this.valueRange(this.count, 'parameter')
+      },
+      immediate: true
     }
   },
   methods: {

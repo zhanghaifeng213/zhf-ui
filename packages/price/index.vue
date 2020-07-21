@@ -1,10 +1,9 @@
 <template>
-  <div class="price-container" :class="[{
-    'price-del':deleted,
-    'l-deleted-class':deleted,
+  <div class="price-container" :class="[customClass,{
+    'price-del':deleted
   }]" :style="{'color': delColor?delColor:color}">
-    <span class="l-unit-class" :style="{'color': unitColor?unitColor:color, 'font-size': (unitSize?unitSize:size)+'px','font-weight': unitBold?unitBold:bold}">{{unit}}</span>
-    <span class="l-value-class" :style="{color: valueColor?valueColor:color,'font-size': (valueSize?valueSize:size)+'px','font-weight': valueBold?valueBold:bold}">{{result}}</span>
+    <span :class="[unitClass]" :style="{'color': unitColor?unitColor:color, 'font-size': (unitSize?unitSize:size)+'px','font-weight': unitBold?unitBold:bold}">{{unit}}</span>
+    <span :class="[valueClass]" :style="{color: valueColor?valueColor:color,'font-size': (valueSize?valueSize:size)+'px','font-weight': valueBold?valueBold:bold}">{{result}}</span>
   </div>
 </template>
 <script>
@@ -26,7 +25,11 @@ export default {
     deleted: Boolean,
     delColor: String,
     reserveDigit: { type: Number, default: 2 },
-    autofix: Boolean
+    autofix: Boolean,
+    customClass: String,
+    unitClass: String,
+    valueClass: String,
+    deletedClass: String
   },
   data() {
     return {

@@ -29,10 +29,6 @@ export default {
       this.spu =
         {
           "id": 2,
-          "title": "林间有风自营针织衫",
-          "price": "77.00",
-          "img": "http://i1.sleeve.7yue.pro/assets/ecf8d824-19d4-4db2-a5da-872ab014fecd.png",
-          "discount_price": "62.00",
           "sku_list": [{
             "id": 2,
             "price": 77.76,
@@ -140,10 +136,6 @@ export default {
       this.spu2 =
         {
           "id": 10,
-          "title": "碳素墨水",
-          "price": "80.00",
-          "img": "http://i2.sleeve.7yue.pro/m24.png",
-          "discount_price": "69.00",
           "sku_list": [{
             "id": 16,
             "price": 72,
@@ -152,13 +144,14 @@ export default {
             "title": "碳素墨水",
             "specs": [],
             "stock": 38
-          }],
-          "sketch_spec_id": null,
-          "default_sku_id": null
+          }]
         }
     },
     onShopping(val) {
       console.log(val)
+      const { orderWay, sku, skuCount } = val
+      let str = `${orderWay === 'cart' ? '加入购物车' : '购买'} "${sku.title}",数量为${skuCount}`
+      alert(str)
     },
     onSpecChange(val) {
       console.log(val)

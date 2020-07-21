@@ -13,6 +13,7 @@ const install = function(Vue) {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
+export { Realm, Price, Counter }
 export default {
   install
 }
