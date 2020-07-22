@@ -70,15 +70,13 @@ import { Judger } from '../models/judger'
 import { Spu } from '../models/spu'
 import { Cell } from '../models/cell'
 import { Cart } from '../models/cart'
+import Price from '../price/index.vue'
+import Fence from '../fence/index.vue'
+import Counter from '../counter/index.vue'
 export default {
   name: 'Realm',
   props: {
-    spu: {
-      type: Object,
-      default() {
-        return {}
-      }
-    },
+    spu: Object,
     orderWay: {
       type: String,
       default: 'cart'
@@ -97,7 +95,11 @@ export default {
     maxCount: { type: Number, default: 99 },
     customClass: String
   },
-
+  components: {
+    Price,
+    Fence,
+    Counter
+  },
   data() {
     return {
       judger: Object,
@@ -127,7 +129,8 @@ export default {
         this.triggerSpecEvent()
       },
       // 代表在wacth里声明了firstName这个方法之后立即先去执行handler方法
-      deep: true
+      deep: true,
+      immediate: true
     }
   },
   computed: {

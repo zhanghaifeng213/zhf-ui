@@ -10,11 +10,15 @@
   </div>
 </template>
 <script>
+import Cell from '../cell/index.vue'
 export default {
   name: 'Fence',
   props: {
     fence: Object,
     x: Number
+  },
+  components: {
+    Cell
   },
   methods: {
     celltap(obj) {

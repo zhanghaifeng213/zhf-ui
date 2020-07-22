@@ -1,23 +1,16 @@
 <template>
   <div class="container-count" :class="[customClass]">
     <div class="symbol" :class="[result<=min|| disabled?'disabled':'abled',
-    {
-      disabledClass:result<=min|| disabled
-    },
-    {
-      symbolClass:!(result<=min|| disabled)
-    }
-    ]" @click="onReduce" data-type="overflow_min" :hover-class="isHover?'count-hover':''">
+    disabledClassCom,
+    symbolClassCom,{'count-hover':isHover}
+    ]" @click="onReduce" data-type="overflow_min">
       <div class="l-icon l-icon-reduce" :style="{'font-size':iconSize,'color':iconColor}"></div>
     </div>
     <input v-if="focus" class="count" :class="[countClass]" :disabled="disabled" type="number" :focus="focus" v-model="result" @blur="onBlur" />
     <div v-else class="count" :class="[countClass]" @click="onCount">{{result}}</div>
-    <div class="symbol" :class="[result>=max|| disabled?'disabled':'abled',{
-      disabledClass:result>=max|| disabled
-    },
-    {
-      symbolClass:!(result>=max|| disabled)
-    }]" @click="onAdd" data-type="overflow_max" :hover-class="isHover?'count-hover':''">
+    <div class="symbol" :class="[result>=max|| disabled?'disabled':'abled',disabledClassCom,
+    symbolClassCom,{'count-hover':isHover}
+    ]" @click="onAdd" data-type="overflow_max">
       <div class="l-icon l-icon-add" :style="{'font-size':iconSize,'color':iconColor}"></div>
     </div>
   </div>
@@ -45,6 +38,22 @@ export default {
       result: 1
     }
   },
+  computed: {
+    symbolClassCom() {
+      if (this.symbolClass && !(this.result <= this.min || this.disabled)) {
+        return this.symbolClass
+      } else {
+        return ''
+      }
+    },
+    disabledClassCom() {
+      if (this.disabledClass && (this.result <= this.min || this.disabled)) {
+        return this.disabledClass
+      } else {
+        return ''
+      }
+    }
+  },
   watch: {
     count: {
       handler() {
@@ -67,10 +76,9 @@ export default {
   },
   methods: {
     doNothing(t) {
-      const { type: e } = t
       this.$emit(
         'linout',
-        { type: e, way: 'icon' }
+        { type: t, way: 'icon' }
       )
     },
     onCount() {
@@ -219,7 +227,7 @@ export default {
 .l-icon::before {
   display: inline-flex;
 }
-.count-hover {
+.count-hover:hover {
   opacity: 0.8;
 }
 </style>
