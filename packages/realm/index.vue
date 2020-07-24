@@ -69,7 +69,6 @@ import { FenceGroup } from '../models/fence-group'
 import { Judger } from '../models/judger'
 import { Spu } from '../models/spu'
 import { Cell } from '../models/cell'
-import { Cart } from '../models/cart'
 import Price from '../price/index.vue'
 import Fence from '../fence/index.vue'
 import Counter from '../counter/index.vue'
@@ -103,7 +102,7 @@ export default {
   data() {
     return {
       judger: Object,
-      currentSkuCount: Cart.SKU_MIN_COUNT,
+      currentSkuCount: this.minCount,
       previewImg: '',
       title: '',
       price: '',
