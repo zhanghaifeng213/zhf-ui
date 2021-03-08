@@ -23,7 +23,11 @@ zhf-ui 是基于 **Vue 2.0** 实现的移动端组件库。组件样式与交互
   <tbody>
     <tr>
       <td align="center" valign="middle">
-        <p style="font-size:12px;">QQ号：751434992</p>
+        <p style="font-size:12px;">QQ群：560391017</p>
+        <p>
+          <img
+            src="https://raw.githubusercontent.com/zhanghaifeng213/zhf-ui/master/public/qq.png">
+        </p>
       </td>
     </tr>
   </tbody>

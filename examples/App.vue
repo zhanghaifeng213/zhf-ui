@@ -21,7 +21,7 @@ export default {
           "id": 2,
           "price": 77.76,
           "discount_price": null,
-          "img": "http://i1.sleeve.7yue.pro/assets/2d22ffec-b1c1-43e0-ad21-25aa5c26ab34.png",
+          "img": "http://i1.sleeve.talelin.com/assets/2d22ffec-b1c1-43e0-ad21-25aa5c26ab34.png",
           "title": "金属灰·七龙珠",
           "spu_id": 2,
           "specs": [{
@@ -46,7 +46,7 @@ export default {
           "id": 3,
           "price": 66,
           "discount_price": 59,
-          "img": "http://i1.sleeve.7yue.pro/assets/c6b52c90-5b10-4823-baef-6c37d3d3532f.png",
+          "img": "http://i1.sleeve.talelin.com/assets/c6b52c90-5b10-4823-baef-6c37d3d3532f.png",
           "title": "青芒色·灌篮高手",
           "spu_id": 2,
           "specs": [{
@@ -71,7 +71,7 @@ export default {
           "id": 4,
           "price": 88,
           "discount_price": null,
-          "img": "http://i1.sleeve.7yue.pro/assets/c6b52c90-5b10-4823-baef-6c37d3d3532f.png",
+          "img": "http://i1.sleeve.talelin.com/assets/c6b52c90-5b10-4823-baef-6c37d3d3532f.png",
           "title": "青芒色·圣斗士",
           "spu_id": 2,
           "specs": [{
@@ -96,7 +96,7 @@ export default {
           "id": 5,
           "price": 77,
           "discount_price": 59,
-          "img": "http://i1.sleeve.7yue.pro/assets/09f32ac8-1af4-4424-b221-44b10bd0986e.png",
+          "img": "http://i1.sleeve.talelin.com/assets/09f32ac8-1af4-4424-b221-44b10bd0986e.png",
           "title": "橘黄色·七龙珠",
           "spu_id": 2,
           "specs": [{
@@ -127,7 +127,7 @@ export default {
           "id": 16,
           "price": 72,
           "discount_price": 68,
-          "img": "http://i2.sleeve.7yue.pro/m25.png",
+          "img": "http://i1.sleeve.talelin.com/spu/moshui1/1.png",
           "title": "碳素墨水",
           "specs": [],
           "stock": 38
